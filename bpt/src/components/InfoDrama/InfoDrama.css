@@ -1,0 +1,139 @@
+.drama-info-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 16px;
+    transition: transform 0.2s;
+    width: 90%; /* Cố định chiều rộng */
+    height: 40%; /* Cố định chiều cao */
+  }
+  
+  .drama-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .drama-info-image {
+    width: 150px; /* Giữ nguyên kích thước hình ảnh */
+    height: 100%; /* Hình ảnh sẽ bao phủ toàn bộ chiều cao của thẻ */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .drama-details {
+    padding: 16px;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .drama-info-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .drama-author {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .drama-description {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 8px 0;
+    line-height: 1.4;
+    text-align: justify;
+    max-height: 100px; /* Giới hạn chiều cao của mô tả */
+    overflow: hidden; /* Ẩn nội dung tràn */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm nếu nội dung tràn */
+  }
+  
+  .drama-info-type {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 8px;
+  }
+  
+  .read-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .read-more:hover {
+    background-color: #0056b3;
+  }
+  
+  .edit-button button{
+    margin-left: 1rem;
+  }
+
+  .info-detail{
+    margin: 1rem 1rem 0;
+  }
+
+  .info-detail ul {
+    list-style-type: none; /* Xóa dấu chấm đầu dòng cho toàn bộ danh sách */
+    padding: 0;
+    margin: 0;
+}
+
+.info-detail li {
+    margin-bottom: 10px; /* Khoảng cách giữa các dòng */
+    
+    display: flex;
+    justify-content: space-between; /* Căn đều nội dung */
+}
+
+.info-detail strong {
+    font-weight: bold; /* Tăng độ đậm chữ cho <strong> */
+}
+.select-artist{
+  margin: 1rem;
+}
+.select-artist li{  
+  list-style-type: none; 
+}
+
+/* Phong cách chung cho select */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  appearance: none; /* Ẩn mũi tên mặc định */
+  -webkit-appearance: none; /* Đối với trình duyệt Safari */
+  -moz-appearance: none; /* Đối với Firefox */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23333' d='M2 0L0 2h4L2 0z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+/* Thêm hiệu ứng khi hover và focus */
+select:hover {
+  border-color: #888;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style cho các option */
+option {
+  padding: 10px;
+  color: #333;
+}

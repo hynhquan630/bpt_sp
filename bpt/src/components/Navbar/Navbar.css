@@ -1,0 +1,91 @@
+/* Đặt lại mặc định một số thẻ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style cho navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Cố định navbar */
+    top: 0; /* Cố định ở đầu trang */
+    width: 100%; /* Đảm bảo navbar phủ toàn bộ chiều rộng */
+    background-color: #333; /* Màu nền navbar */
+    padding: 1rem 2rem; /* Khoảng cách giữa các phần tử bên trong */
+    color: white;
+    z-index: 1000; /* Đảm bảo navbar luôn nằm trên các phần khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng */
+  }
+  
+  .navbar-logo a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .navbar-links li a:hover {
+    color: #f0a500;
+  }
+  
+  .navbar-cart {
+    position: relative;
+  }
+  
+  .navbar-cart a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-cart a .fas {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #f0a500;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .navbar-cart {
+      margin-top: 1rem;
+    }
+  }
+  body {
+    padding-top: 60px; /* Tạo khoảng trống cho phần nội dung bên dưới */
+}

@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    height: 100vh; /* Chiều cao của container */
+  }
+  
+  .left {
+    flex: 1; /* Chiếm 1 phần */
+    background-color: #f0f0f0; /* Màu nền cho dễ nhìn */
+  }
+  
+  .right {
+    flex: 2; /* Chiếm 2 phần */
+    background-color: #d0d0d0; /* Màu nền cho dễ nhìn */
+  }
+  

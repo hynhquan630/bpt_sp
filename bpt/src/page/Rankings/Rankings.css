@@ -1,0 +1,114 @@
+.full-ranking-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+.filter-container{
+    /* Khoảng cách giữa các grid item */
+    padding: 20px 40px 0px;
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+    background-color: #f5f5f5; /* Màu nền */
+    border-radius: 8px; /* Bo góc cho container */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.filter-rank-title{
+    margin: 0; /* Bỏ khoảng cách mặc định của thẻ h2 */
+    font-size: 1.5rem; /* Cỡ chữ tiêu đề */
+}
+
+.filter-rank-options {
+    display: flex; /* Sắp xếp theo chiều ngang */
+    gap: 15px; /* Khoảng cách giữa các select */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.filter-rank-select {
+    width: 200px; 
+    padding: 10px; /* Khoảng cách bên trong cho select */
+    border: 1px solid #ccc; /* Viền cho select */
+    border-radius: 4px; /* Bo góc cho select */
+    font-size: 1rem; /* Cỡ chữ */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển màu viền */
+}
+
+.filter-rank-select:focus {
+    border-color: #007bff; /* Đổi màu viền khi select được chọn */
+    outline: none; /* Ẩn outline mặc định */
+}
+
+
+.grid-container {
+    display: flex;
+    /* 2 cột, mỗi cột chiếm 1 phần bằng nhau */
+    gap: 20px;
+    /* Khoảng cách giữa các grid item */
+    padding: 20px;
+    
+    height: 90vh;
+    /* Khoảng cách bên trong container */
+    background-color: #f5f5f5;
+    /* Chiều cao của container */
+    /* Màu nền nhạt cho container */
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    /* Màu nền trắng cho mỗi item */
+    padding: 20px;
+    flex: 1;
+    /* Khoảng cách bên trong mỗi item */
+    border-radius: 10px;
+    /* Bo góc cho các item */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+    transition: transform 0.2s;
+    /* Hiệu ứng hover */
+    max-height: 100%;
+    /* Chiều cao tối đa là 100% của lớp cha */
+    /* Thêm cuộn dọc nếu cần */
+}
+.item-list-rank{
+    max-height: 100%;
+    overflow-y: scroll;
+
+    overflow-x: hidden; /* Đảm bảo cho phép tràn ra ngoài */
+    position: relative;
+    flex:9;
+}
+.item-list-rank::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên trình duyệt WebKit (Chrome, Safari) */
+}
+.grid-item:hover {
+    transform: translateY(-5px);
+    /* Hiệu ứng nổi khi hover */
+}
+
+.item-heading {
+    background: transparent;
+    flex:1;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* Cỡ chữ lớn hơn cho tiêu đề */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới tiêu đề */
+    color: #333;
+    /* Màu chữ tiêu đề */
+    border-bottom: 2px solid #132333;
+    /* Đường gạch chân màu xanh dưới tiêu đề */
+    padding-bottom: 5px;
+}
+
+p {
+    color: #666;
+    /* Màu chữ nhạt hơn cho đoạn văn */
+    line-height: 1.6;
+    /* Khoảng cách dòng dễ đọc */
+}

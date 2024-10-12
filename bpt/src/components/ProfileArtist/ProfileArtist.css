@@ -1,0 +1,140 @@
+.profile-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Tăng độ mờ của bóng */
+    background-color: #f9f9f9; /* Đổi nền sáng hơn */
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.profile-container:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Hiệu ứng khi hover */
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2px;
+}
+.sticky-header {
+    position: sticky; /* Cố định khi cuộn */
+    top: 0; /* Cố định ở trên cùng của phần tử cha */
+    background-color: #f9f9f9; /* Màu nền để dễ nhìn */
+    z-index: 10; /* Đảm bảo nó nằm trên các phần khác */
+    padding: 10px 0; /* Khoảng cách bên trên và dưới */
+    border-bottom: 1px solid #ccc; /* Đường viền dưới để phân biệt */
+}
+.align-image{
+    padding: 0 calc(25%);
+    align-items: center;
+}
+
+.artist-image {
+    width: 100%;
+    padding-top: 100%;
+    /* Tạo một tỷ lệ 1x1 bằng cách dùng padding-top */
+    position: relative;
+    /* Để định vị ảnh con bên trong */
+    overflow: hidden;
+    margin-top: 5%;
+}
+.option-profile{
+    display: flex;
+    justify-content: space-between;
+}
+.artist-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    border-radius: 50%;
+    /* Bo tròn ảnh */
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #4CAF50; /* Tăng độ dày border */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động khi hover */
+}
+
+.avatar:hover {
+    transform: scale(1.1); /* Phóng to avatar khi hover */
+}
+
+.username {
+    font-size: 26px; /* Tăng font-size */
+    margin: 5px 0 5px;
+    font-weight: bold; /* Tăng độ dày chữ */
+    color: #333; /* Đổi màu chữ đậm hơn */
+}
+
+.bio {
+    color: #555; /* Đổi màu cho nhẹ nhàng hơn */
+    font-style: italic;
+    font-size: 14px;
+}
+
+.profile-content h2 {
+    font-size: 22px; /* Tăng kích thước */
+    color: #4CAF50; /* Đổi màu chủ đạo thành màu xanh */
+    margin-bottom: 5;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.profile-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-content li {
+    margin: 10px 10%; /* Tăng khoảng cách giữa các dòng */
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between; /* Căn đều nội dung */
+}
+
+.profile-content li strong {
+    color: #333; /* Màu đậm cho tiêu đề */
+}
+.button-edit-artist{
+    margin-right: 10%;
+}
+/* Style cho các nút */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Màu nền xanh */
+    color: #fff; /* Màu chữ trắng */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    background-color: #45a049; /* Màu xanh đậm hơn khi hover */
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: #4CAF50; /* Đổi màu viền khi focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}

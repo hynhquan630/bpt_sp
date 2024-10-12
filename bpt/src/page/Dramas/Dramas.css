@@ -1,0 +1,26 @@
+.drama-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.drama-item {
+  background-color: #f9f9f9; /* Màu nền sáng cho ô */
+  border: 1px solid #ddd; /* Đường viền nhẹ */
+  border-radius: 8px; /* Bo góc */
+  padding: 0.5rem; /* Khoảng cách bên trong */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+  transition: transform 0.2s; /* Hiệu ứng chuyển động khi hover */
+}
+
+.drama-item:hover {
+  transform: scale(1.05); /* Phóng to ô khi hover */
+}
+
+/* Thêm style cho tiêu đề và mô tả */
+.drama-item h3 {
+  font-size: 1.2rem; /* Kích thước tiêu đề */
+  margin: 0 0 0.5rem; /* Giảm khoảng cách dưới tiêu đề */
+}
+

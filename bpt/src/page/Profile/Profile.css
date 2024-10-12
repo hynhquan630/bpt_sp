@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  display: flex;
+  /* Sử dụng flexbox để sắp xếp hai phần */
+  height: 100vh;
+  /* Chiều cao tổng thể của container */
+}
+
+.left,
+.right {
+  overflow-y: auto;
+  /* Kích hoạt cuộn dọc */
+  padding: 10px;
+  /* Thêm khoảng cách bên trong */
+}
+
+.left {
+  flex: 1;
+  /* Bên trái chiếm 1/3 chiều rộng */
+  background-color: #f0f0f0;
+  /* Màu nền cho bên trái */
+}
+
+.right {
+  flex: 2;
+  /* Bên phải chiếm 2/3 chiều rộng */
+  background-color: #e0e0e0;
+  /* Màu nền cho bên phải */
+}
+
+/* Tùy chỉnh chiều cao nếu cần */
+.left,
+.right {
+  max-height: 100%;
+  /* Đảm bảo chiều cao tối đa bằng chiều cao của container */
+}
+
+.right button {
+  border-radius: 10;
+  position: absolute;
+  margin-top: 0;
+  margin-left: -2%;
+  width: 25px;
+  height: 20px;
+  background-image: url('https://static.thenounproject.com/png/2040082-200.png');
+  background-size: 25px 20px;
+  background-repeat: no-repeat;
+  background-position: 3px center; 
+  background-color: transparent;
+}
+
+.right button:hover {
+  background-color: rgb(155, 179, 226); /* Thêm màu nền khi hover, vẫn trong suốt nhẹ */
+  border-color:red; /* Đổi màu viền khi hover */
+}

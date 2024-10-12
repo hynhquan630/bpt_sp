@@ -1,0 +1,73 @@
+/* Định dạng cho từng thẻ sản phẩm */
+.figure-card {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.figure-card:hover {
+    transform: scale(1.05);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.figure-image {
+    width: 80%;
+    padding-top: 80%;
+    /* Tạo một tỷ lệ 1x1 bằng cách dùng padding-top */
+    position: relative;
+    /* Để định vị ảnh con bên trong */
+    overflow: hidden;
+    left: 10%;
+    margin-bottom: 10%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.figure-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    border-radius: 50%;
+    /* Bo tròn ảnh */
+}
+
+.figure-name {
+    font-size: 0.8rem; /* Kích thước font cho tên */
+    margin-bottom: 0.2rem; /* Khoảng cách dưới */
+    font-weight: 600; /* Đậm chữ */
+    color: #333; /* Màu chữ */
+    overflow: hidden; /* Ẩn phần nội dung vượt quá */
+    text-overflow: ellipsis; /* Hiển thị dấu "..." nếu có nội dung quá dài */
+    white-space: normal; /* Cho phép xuống dòng */
+}
+
+.figure-ver {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 20px; /* Cố định chiều cao cho phiên bản */
+    font-size: 0.5rem; /* Kích thước font cho phiên bản */
+    color: #888; /* Màu chữ cho phiên bản */
+    overflow: hidden; /* Ẩn phần nội dung vượt quá */
+    text-overflow: ellipsis; /* Hiển thị dấu "..." nếu có nội dung quá dài */
+    white-space: nowrap; /* Ngăn nội dung xuống dòng */
+}
+
+
+.figure-city {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.8rem;
+}
+
+.link {
+    text-decoration: none;
+    /* Bỏ dấu gạch chân */
+    color: inherit;
+    /* Đảm bảo màu chữ thừa kế từ parent */
+}

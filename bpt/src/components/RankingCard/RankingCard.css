@@ -1,0 +1,158 @@
+/* Student Card */
+.artist-rank-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px 5px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Thêm hiệu ứng chuyển động */
+  background: linear-gradient(to left, #ffffff, #919191);
+  position: relative; /* Đặt vị trí tương đối */
+  z-index: 1; /* Đặt z-index thấp hơn */
+}
+
+/* Thêm hiệu ứng hover cho Student Card */
+.artist-rank-card:hover {
+  transform: scale(1.04); /* Tăng kích thước một chút */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn */
+  z-index: 10; /* Đặt z-index cao hơn để nó đè lên */
+  position: relative; /* Đặt vị trí tuyệt đối để vượt ra ngoài lớp cha */
+}
+
+/* Thêm hiệu ứng cho rank 1, 2, và 3 */
+.highlight-1 {
+  border: 3px solid rgb(255, 234, 0); /* Viền màu vàng cho những người đứng đầu */
+  background: linear-gradient(to left, #f6f6d7, yellow)
+}
+.highlight-2 {
+  border: 2px solid rgb(159, 141, 245); /* Viền màu vàng cho những người đứng đầu */
+  background: linear-gradient(to left, #e9faff, #40bfe5)
+}
+/*background: linear-gradient(to right, #ff7e5f, #feb47b);*/
+.highlight-3 {
+  border: 1.6px solid #c49f79; /* Viền màu vàng cho những người đứng đầu */
+  background: linear-gradient(to left, #fbf8f1, #ecb639)
+}
+
+.highlight-4 {
+  border: 0.7px solid rgb(152, 180, 152); /* Viền màu vàng cho những người đứng đầu */  
+  background: linear-gradient(to left, #eaf2ea, #45e345)
+}
+.highlight-None {
+  background: linear-gradient(to right, #ffffff, #ffd0d0)
+}
+
+
+/* Thêm hiệu ứng hover cho rank 1, 2, và 3 */
+.artist-rank-card.highlight:hover {
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4); /* Đổ bóng mạnh hơn khi hover */
+}
+/* Student Photo */
+.avatar-rank-card {
+  width: 60px; /* Chiều rộng cố định */
+  height: 60px; /* Chiều cao cố định */
+  border-radius: 50%; /* Bo tròn để tạo thành hình tròn */
+  overflow: hidden; /* Ẩn phần ảnh thừa ra ngoài khung */
+  position: relative; /* Thiết lập vị trí cho phần tử con */
+}
+.crown-icon {
+  position: absolute; /* Đặt vương miện ở vị trí tuyệt đối */
+  top: 0; /* Căn lên trên */
+  right: 0; /* Căn sang bên phải */
+  width: 30px; /* Kích thước vương miện */
+  height: 30px; /* Kích thước vương miện */
+  /* Bạn có thể thêm thêm hiệu ứng nếu cần */
+}
+
+/* Ảnh trong container */
+.avatar-rank-card img {
+  position: absolute; /* Đặt ảnh vào vị trí tuyệt đối */
+  top: 50%; /* Đưa ảnh lên giữa theo chiều dọc */
+  left: 50%; /* Đưa ảnh lên giữa theo chiều ngang */
+  width: 100%; /* Chiều rộng 100% của container */
+  height: 100%; /* Chiều cao 100% của container */
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+  transform: translate(-50%, -50%); /* Căn giữa ảnh */
+  border-radius: 50%; /* Bo tròn ảnh để giữ nguyên hình dạng tròn */
+}
+
+/* Student Name */
+.artist-rank-name {
+  flex: 3;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s; /* Thêm hiệu ứng chuyển động cho tên */
+}
+
+/* Student Info */
+.artist-type-info {
+  flex: 1;
+  color: #555;
+  font-size: 1rem;
+  margin: 5px 0;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s; /* Thêm hiệu ứng chuyển động cho thông tin */
+}
+
+/* CSS chung cho artist-rank-info */
+.artist-rank-info {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+  font-weight: 500;
+  transition: transform 0.2s, color 0.3s;
+}
+
+/* CSS cho từng rank */
+.rank-1 {
+  
+  font-size: 2rem;
+  color: rgb(241, 96, 12); /* Màu vàng cho vị trí đầu */
+  font-weight: bold; /* Chữ đậm */
+  transform: scale(1.1); /* Phóng to nhẹ */
+}
+
+.rank-2 {
+  
+  font-size: 1.8rem;
+  color: rgb(76, 48, 232); /* Màu bạc cho vị trí thứ hai */
+  font-weight: bold; /* Chữ đậm */
+  transform: scale(1.1); /* Phóng to nhẹ */
+}
+
+.rank-3 {
+  
+  font-size: 1.6rem;
+  color: #9a7b5d; /* Màu đồng cho vị trí thứ ba */
+  font-weight: bold; /* Chữ đậm */
+  transform: scale(1.1); /* Phóng to nhẹ */
+}
+
+.rank-4 {
+  
+  font-size: 1.4rem;
+  color: rgb(72, 119, 90); /* Màu chữ đậm cho các vị trí còn lại */
+  font-weight: 600; /* Chữ bình thường */
+}
+
+
+.rank-None {
+  
+  font-size: 0.8rem;
+  color: rgb(0, 0, 0); /* Màu chữ đậm cho các vị trí còn lại */
+  font-weight: 500; /* Chữ bình thường */
+}
+
+/* Thêm hiệu ứng hover cho tất cả các rank */
+.artist-rank-info:hover {
+  transform: scale(1.15); /* Phóng to khi hover */
+  cursor: pointer; /* Hiển thị con trỏ khi hover */
+}
+
