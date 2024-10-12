@@ -1,6 +1,6 @@
 import axios from "axios"
 
 export const makeRequest = axios.create({
-    baseURL: "http://192.168.43.160:8800/api/",
+    baseURL: "https://bpt-sp.onrender.com/api/",
     withCredentials: true,
 })
