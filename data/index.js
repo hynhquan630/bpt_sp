@@ -17,7 +17,8 @@ app.use((req, res, next) => {
     next()
 })
 app.use(express.json())
-app.use(cors({
+
+/*app.use(cors({
     origin: (origin, callback) => {
         const allowedOrigins = ['http://localhost:3000', 'http://192.168.43.160:3000','*']; // Thêm các nguồn được phép
         if (allowedOrigins.includes(origin)) {
@@ -27,6 +28,10 @@ app.use(cors({
         }
     },
     credentials: true
+}
+))*/
+app.use(cors({
+    origin: `http://localhost:3000`,
 }
 ))
 
